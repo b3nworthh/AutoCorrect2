@@ -150,11 +150,11 @@
     "help": "The ACLogAnalyzer tool doesn't always run in the background, so this hotkey assignment is actually in the AutoCorrect2.ahk code.  This will initial an analysis of the AutoCorrections Log.",
     "type": "hotkey"
   },
-  "Hotkeys.AC2HotkeyRefHotkey": {
-    "label": "AC2HotkeyReference Hotkey",
-    "help": "This is the hotkey for the Hotkey \"Cheatsheet\" application.  By default the dialog is shown at startup, but this can be disabled in the ahk code of the app.",
+  "Hotkeys.HotkeyHubHotkey": {
+    "label": "Hotkey Hub",
+    "help": "Shows the Hotkey Hub cheatsheet / launcher.\nPress again while the window is up to hide it.\nReplaces the old AC2HotkeyRef and HotKeyTool hotkeys.",
     "type": "hotkey",
-    "restart": "..\\Tools\\AC2HotkeyRef.exe"
+    "restart": "..\\Tools\\HotkeyHub.exe"
   },
   "Shared.DefaultEditor": {
     "label": "Default Editor",
@@ -801,7 +801,7 @@
     "validation": "(?i)^(0|1), ?(stay|close)$",
     "restart": "..\\Core\\AutoCorrect2.exe"
   },
-  "ControlButtons.HotkeyRef": {
+  "ControlButtons.HotkeyHub": {
     "label": "Hotkey Reference Tool",
     "help": "This is the setting for the \"Hotkey Reference Tool\" button in the Control Pane.  There should be two parts, separated by a comma.\n- First part: 1/0 where one includes the button in the Control Pane.\n- Second part: stay/close where stay means that the Hotstring Helper dialog should stay open after the button is pressed.\n(Note: The specifics of what the button does is hard-coded in AutoCorrect2.ahk.)",
     "type": "text",
@@ -884,5 +884,93 @@
     "type": "text",
     "validation": "(?i)^(0|1), ?(stay|close)$",
     "restart": "..\\Core\\AutoCorrect2.exe"
+  },
+  "HotkeyHub.ShowHidden": {
+    "label": "Show hidden hotkeys",
+    "help": "Include hotkeys whose in-line comment contains the word 'hide',\nplus commented-out hotkey stubs such as  ; ^!d::Something()\n\nAlso toggled by the 'Show hidden' checkbox in the window, which\nwrites this key straight back.",
+    "type": "boolean",
+    "options": [
+      "0=Disabled",
+      "1=Enabled"
+    ],
+    "restart": "..\\Tools\\HotkeyHub.exe"
+  },
+  "HotkeyHub.ShowApps": {
+    "label": "Show applications",
+    "help": "Include .lnk shortcuts from your favourites folders and the Start\nMenu alongside the hotkeys.  Enter runs these instead of sending\na hotkey.\n\nThe folders scanned are set by Cfg.lnkFolders in HotkeyHub.ahk.\nAlso toggled by the 'Apps' checkbox in the window.",
+    "type": "boolean",
+    "options": [
+      "0=Disabled",
+      "1=Enabled"
+    ],
+    "restart": "..\\Tools\\HotkeyHub.exe"
+  },
+  "HotkeyHub.ScanAll": {
+    "label": "Scan all running scripts",
+    "help": "Disabled: only scripts running from the AutoCorrect2 folder are\nscanned.\nEnabled: every running portably-run AHK script on the system is\nscanned -- that is, a renamed AutoHotkey.exe paired with a\nsame-named .ahk file.\n\nAlso toggled by the 'Scan all' checkbox in the window.",
+    "type": "boolean",
+    "options": [
+      "0=Disabled",
+      "1=Enabled"
+    ],
+    "restart": "..\\Tools\\HotkeyHub.exe"
+  },
+  "HotkeyHub.FriendlyNames": {
+    "label": "Friendly hotkey names",
+    "help": "How the Hotkey column is written, in the list and in exported\ncheatsheets.\n\nFriendly:  Ctrl+Alt+D\nRaw AHK:   ^!d\n\nAlso toggled by the 'Friendly names' checkbox in the window.",
+    "type": "boolean",
+    "options": [
+      "0=Raw AHK symbols",
+      "1=Friendly names"
+    ],
+    "restart": "..\\Tools\\HotkeyHub.exe"
+  },
+  "HotkeyHub.SortCol": {
+    "label": "Sort column",
+    "help": "Which column the list is sorted by.\n\nSet by clicking a column header in the window -- click once to\nsort, again to reverse, a third time to return to scan order.\nRarely worth editing by hand.",
+    "type": "integer",
+    "options": [
+      "0=Scan order (unsorted)",
+      "1=Hotkey",
+      "2=Action",
+      "3=Context",
+      "4=Source",
+      "5=Used"
+    ],
+    "restart": "..\\Tools\\HotkeyHub.exe"
+  },
+  "HotkeyHub.SortDesc": {
+    "label": "Sort direction",
+    "help": "Reverses the sort set by 'Sort column'.  Ignored when that is set\nto scan order.\n\nNote that the Used column starts on most-used-first, so ascending\nthere means the highest counts are at the top.",
+    "type": "boolean",
+    "options": [
+      "0=Ascending",
+      "1=Descending"
+    ],
+    "restart": "..\\Tools\\HotkeyHub.exe"
+  },
+  "HotkeyHub.WinX": {
+    "label": "Window X position",
+    "help": "Screen position of the window's left edge, in pixels.\n\nSaved automatically when the window is hidden, so hand edits are\noverwritten the next time you close it.  Set Cfg.rememberPos := 0\nin HotkeyHub.ahk to stop it being saved at all.",
+    "type": "integer",
+    "restart": "..\\Tools\\HotkeyHub.exe"
+  },
+  "HotkeyHub.WinY": {
+    "label": "Window Y position",
+    "help": "Screen position of the window's top edge, in pixels.\n\nSaved automatically when the window is hidden.",
+    "type": "integer",
+    "restart": "..\\Tools\\HotkeyHub.exe"
+  },
+  "HotkeyHub.WinW": {
+    "label": "Window width",
+    "help": "Client width of the window, in pixels.\n\nSaved automatically when the window is hidden.  Values of 300 or\nless are ignored, so setting this to 0 restores the default width\nfrom Cfg.guiWidth in HotkeyHub.ahk.",
+    "type": "integer",
+    "restart": "..\\Tools\\HotkeyHub.exe"
+  },
+  "HotkeyHub.WinH": {
+    "label": "Window height",
+    "help": "Client height of the window, in pixels.\n\nSaved automatically when the window is hidden.  Set WinW to 0 to\nreturn both dimensions to their defaults.",
+    "type": "integer",
+    "restart": "..\\Tools\\HotkeyHub.exe"
   }
 }

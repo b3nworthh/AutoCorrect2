@@ -14,8 +14,6 @@ SetWorkingDir(A_ScriptDir)
 ; New versions will be on GitHub.  See also 'Tools\Updater.exe' for updates. 
 ; ========================================
 
-;!q::msgbox "this ahk version: " A_AhkVersion
-
 ; ============== OPTIONAL INCLUDES ==============
 ; These files need to be in the same directory or properly referenced
 ; The "*i" prevents an error if the file doesn't exist.
@@ -977,11 +975,11 @@ class UI {
         })
                 
         ; Check if tool is present, add button.
-        if FileExist("..\Tools\AC2HotkeyRef.exe") {
+        if FileExist("..\Tools\HotkeyHub.exe") {
             this.controlButtons.Push({
-                name: "HotkeyRef",
+                name: "HotkeyHub",
                 text: " Hotkey Reference Tool", 
-                action: (*) => Run("..\Tools\AC2HotkeyRef.exe"),
+                action: (*) => Run("..\Tools\HotkeyHub.exe"),
                 icon: A_ScriptDir "\..\Resources\Icons\blue-questionmark.ico"
             })
         }
@@ -4567,8 +4565,8 @@ class HelpSystem {
                 case "Defunctionizer":
                     this.helpTexts["ControlButton_Defunctionizer"] := "This is for users who do not want their AutoCorrect items embedded in the f() function calls. The `"Defunctionizer`" tool removes them."
 
-                case "HotkeyRef":
-                    this.helpTexts["ControlButton_HotkeyRef"] := "Launches the AC2 Hotkey Reference tool.`n`nThis tool scans your running AutoHotkey scripts and displays all defined hotkeys in a filterable, sortable ListView.`n`nColumns show the Hotkey, its Action/description, the Context it applies in, and which Script it came from.`n`nYou can filter the list by typing in the search box, and export the full list to a printable HTML file.`n`nThe tool reads hotkey definitions from the running scripts and from acSettings.ini.`n`nThere are several user config options and a list of files to skip in the Tools\AC2HotkeyRef.ahk file."
+                case "HotkeyHub":
+                    this.helpTexts["ControlButton_HotkeyHub"] := "Launches the AC2 Hotkey Reference tool.`n`nThis tool scans your running AutoHotkey scripts and displays all defined hotkeys in a filterable, sortable ListView.`n`nColumns show the Hotkey, its Action/description, the Context it applies in, and which Script it came from.`n`nYou can filter the list by typing in the search box, and export the full list to a printable HTML file.`n`nThe tool reads hotkey definitions from the running scripts and from acSettings.ini.`n`nThere are several user config options and a list of files to skip in the Tools\HotkeyHub.ahk file.  Recenter versions add the apbility to display apps on your computer and hotkey filtering options."
 
                 case "OpenFolder":
                     this.helpTexts["ControlButton_OpenFolder"] := "Opens the AutoCorrect2 root folder in your preferred file manager.`n`nBy default, Windows Explorer is used as the fallback.`n`nTo use a different file manager (XYplorer, Directory Opus, xplorer², etc.), set the full path to its executable in the [Files] section of acSettings.ini:`n  FileManagerPath=C:\Program Files\XYplorer\XYplorer.exe`nTip: Just use the Settings Manager tool.`nIf the path is left blank, or the specified exe is not found, Windows Explorer will be used automatically."
