@@ -17,9 +17,9 @@ SetWorkingDir(A_ScriptDir)
 ; ============== OPTIONAL INCLUDES ==============
 ; These files need to be in the same directory or properly referenced
 ; The "*i" prevents an error if the file doesn't exist.
-#Include "*i ..\Includes\DateTool.ahk"              ;  Calendar tool with holidays -- Optional
-#Include "*i ..\Includes\PrinterTool.ahk"           ;  Shows list of installed printers -- Optional 
-#Include "*i ..\Includes\ChatGptWordLookup.ahk"     ;  ChatGPT-based word definitions -- Optional
+; #Include "*i ..\Includes\DateTool.ahk"              ;  Calendar tool with holidays -- Optional
+; #Include "*i ..\Includes\PrinterTool.ahk"           ;  Shows list of installed printers -- Optional 
+; #Include "*i ..\Includes\ChatGptWordLookup.ahk"     ;  ChatGPT-based word definitions -- Optional
 
 #HotIf Config.EnableHotStrQuickLookup ;  So users can permanently disable HQL via acSettings.ini
     #Include "*i ..\Includes\HotstringQuickLookup.ahk"  ;  Get usage stats for selected hotstring --Optional

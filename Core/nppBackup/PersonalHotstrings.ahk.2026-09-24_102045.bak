@@ -14,11 +14,3 @@
 ::x-::X-energy	; ~ BH 09/16/2026
 ::-x::TRISO-x	; ~ BH 09/16/2026
 :*:triso/sd::09/14/2026	; Triso-X start date
-:B0XC1:fbcvd::f("FB-CVD", 0)
-:B0X:fbcvd/::f("Fluidized bed chemical vapor deposition", 0)
-:B0X:fcm/::f("fully ceramic microencapsulated", 0)
-:B0X:ornl/::f("Oak Ridge National Laboratory", 0)
-:B0X:un/::f("uranium nitride")
-:B0X*:t-x::f("triso-x")
-:B0X:uco::f("UCO")
-:B0X:UCO/::f("uranium oxide-carbide")

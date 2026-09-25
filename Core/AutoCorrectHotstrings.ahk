@@ -7454,3 +7454,17 @@ ACitemsEndAt := A_LineNumber - 3 ; hh2 validity checks will skip lines after her
 ; Anything below this point was added to the script by the user via the Win+H hotkey.
 ;-------------------------------------------------------------------------------
 
+
+:B0XC0:fbcvd::f("FB-CVD") ; Fixes 1 word 
+:B0X:feul::f("fuel") ; Web Freq 39.15 | Fixes 1 word 
+:B0XC1:fcm::f("FCM") ; Fixes 1 word 
+:B0X:midiate::f("mediate") ; Web Freq 0.98 | Fixes 1 word 
+:B0X:immidiately::f("immediately") ; Web Freq 37.86 | Fixes 1 word 
+:B0X:aassessment::f("assessment") ; Web Freq 59.51 | Fixes 1 word 
+:B0XC1:ornl::f("ORNL") ; Fixes 1 word 
+:B0X?*:dersirable::f("desirable") ; Web Freq 7.33 | Fixes 8 words 
+::doe/::Department Of Energy
+:B0X:strontiu::f("strontium") ; Web Freq 0.36 | Fixes 1 word 
+:B0X?*:eserch::f("esearch") ; Web Freq 342.70 | Fixes 11 words 
+:B0X?*:kerna::f("kerne") ; Web Freq 23.20 | Fixes 10 words 
+:B0X?*:artipl::f("articl") ; Web Freq 357.59 | Fixes 19 words 

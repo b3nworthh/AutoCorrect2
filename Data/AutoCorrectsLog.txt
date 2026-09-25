@@ -1678,3 +1678,31 @@ YYYY-MM-DD date format. ‘<<’ indicates that Backspace was pressed right after, ‘
 2025-11-06 -- :?C:ign::ing
 2025-11-06 << :*:anoy::annoy
 2026-04-11 -- :*?:igth::ight
+2026-09-24 << ::fcm/::fully ceramic microencapsulated
+2026-09-24 -- ::fcm/::fully ceramic microencapsulated
+2026-09-24 -- ::fcm/::fully ceramic microencapsulated
+2026-09-24 -- :*:uel::eul
+2026-09-24 -- :C1:fcm::FCM
+2026-09-24 << :C1:fcm::FCM
+2026-09-24 -- :C1:fcm::FCM
+2026-09-24 -- :C1:fcm::FCM
+2026-09-24 << :*?:mmei::mmie
+2026-09-24 -- :*?:assesm::assessm
+2026-09-24 -- ::un/::uranium nitride
+2026-09-24 << :*:tyo::to
+2026-09-24 -- ::un/::uranium nitride
+2026-09-24 -- :C0:fbcvd::FB-CVD
+2026-09-24 -- :C0:fbcvd::FB-CVD
+2026-09-24 -- :C0:fbcvd::FB-CVD
+2026-09-24 -- :C0:fbcvd::FB-CVD
+2026-09-24 -- ::t-x::triso-x
+2026-09-24 -- ::t-x::triso-x
+2026-09-24 -- :*:t-x::triso-x
+2026-09-24 -- :*?:desirea::desira
+2026-09-24 -- :*:hte::the
+2026-09-24 << :*?C:yaer::year
+2026-09-24 -- :*?C:hcih::hich
+2026-09-24 -- :*?:metn::ment
+2026-09-24 -- :?*:kerna::kerne
+2026-09-24 << :*?C:nlcu::nclu
+2026-09-24 -- :*?:chagn::chang
